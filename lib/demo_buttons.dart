@@ -14,7 +14,7 @@ class _DemoButtonsState extends State<DemoButtons> {
 
   @override
   Widget build(BuildContext context) {
-    print('DemoButtons BUILD called');
+    // This build will happen each time you click 'Yes' or 'No'.
     return Column(
         mainAxisSize: MainAxisSize.min, // Only get as tall as needed
         children: [

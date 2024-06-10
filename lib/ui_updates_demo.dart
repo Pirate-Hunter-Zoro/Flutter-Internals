@@ -5,12 +5,6 @@ class UIUpdatesDemo extends StatefulWidget {
   const UIUpdatesDemo({super.key});
 
   @override
-  StatefulElement createElement() {
-    print('UIUpdatesDemo CREATEELEMENT called');
-    return super.createElement();
-  }
-
-  @override
   State<UIUpdatesDemo> createState() {
     return _UIUpdatesDemo();
   }
@@ -19,8 +13,7 @@ class UIUpdatesDemo extends StatefulWidget {
 class _UIUpdatesDemo extends State<UIUpdatesDemo> {
   @override
   Widget build(BuildContext context) {
-    print('UIUpdatesDemo BUILD called');
-    // This will only show up ONCE when you launch the application and will not print again until you relaunch
+    // This build will only occure ONCE when you launch the application and will not print again until you relaunch
     return const Padding(
       padding: EdgeInsets.all(8.0),
       child: Center(
@@ -39,6 +32,7 @@ class _UIUpdatesDemo extends State<UIUpdatesDemo> {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 24),
+            // Everything that CHANGES when you tap the preceding 'Yes' or 'No' button is contained within the following widget:
             DemoButtons()
           ],
         ),
